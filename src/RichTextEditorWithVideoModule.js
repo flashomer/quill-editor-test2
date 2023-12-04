@@ -18,7 +18,7 @@ const RichTextEditorWithVideoModule = () => {
 
     return <>
         <Helmet>
-            <meta http-equiv="Content-Security-Policy" content="frame-src 'self' data: *" />
+            <meta http-equiv="Content-Security-Policy" content="frame-src 'self' *.youtube.com *.vimeo.com; img-src 'self' *.youtube.com *.vimeo.com *.ytimg.com *.vimeocdn.com blob: data:;" />
         </Helmet>
         <ReactQuill className="reactQuill" modules={modules} theme="snow" value={value} onChange={setValue} />
     </>;
